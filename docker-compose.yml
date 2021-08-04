@@ -1,0 +1,19 @@
+version: '3.2'
+networks:
+  face:
+services:
+  hrface:
+    image: hrface:latest
+    ports:
+      #product
+      - "8080:8080"
+      #dev
+      - "8081:8081"
+    volumes:
+      #项目路径
+      - G:\works\go\hr-face-free:/data/src
+      #图片路径
+      - G:\works\go\hr-face-free\public:/data/src/public
+    networks:
+      - face
+    restart: always

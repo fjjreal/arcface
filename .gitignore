@@ -1,0 +1,6 @@
+*.so
+*.dat
+.idea
+arc.json
+product.*
+go.sum
